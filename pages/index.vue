@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    
+    <h1>cambio</h1>
   </section>
 </template>
 
