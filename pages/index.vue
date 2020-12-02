@@ -17,6 +17,7 @@ export default {
   async asyncData({$axios}) {
     const data = await $axios.$get('https://applicationnotes.000webhostapp.com/api/notes')
     console.log(data)
+    
   }
 }
 </script>
