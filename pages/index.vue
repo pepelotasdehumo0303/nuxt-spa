@@ -36,10 +36,12 @@ export default {
         updated_at: "1606592051",
       },
     };
-    const data = await this.$axios.$post('/api/notes',
+    const res = await this.$axios.post('/api/notes',
     jsonPost)
 
-    console.log(data)
+    console.log(res.request)
+
+    console.log(res.data)
   },
 };
 </script>
