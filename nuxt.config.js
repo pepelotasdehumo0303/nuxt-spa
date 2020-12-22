@@ -48,8 +48,7 @@ export default {
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    proxy: true,
-    prefix: 'https://applicationnotes.000webhostapp.com/api'
+    proxy: true
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)

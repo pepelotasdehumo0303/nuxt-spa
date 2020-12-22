@@ -36,7 +36,7 @@ export default {
         updated_at: "1606592051",
       },
     };
-    const data = await this.$axios.$post('/notes',
+    const data = await this.$axios.$post('/api/notes',
     jsonPost)
 
     console.log(data)
