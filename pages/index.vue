@@ -15,13 +15,13 @@
 export default {
   async fetch() {
     try {
-      let jsonPost = {
-        userId: 1,
-        title: 'un titulo',
-        body: 'un body'
-      };
-      const res = await this.$axios.$post('https://jsonplaceholder.typicode.com/posts', jsonPost)
-      console.log('peticion a jsonplaceholder', res)
+      // let jsonPost = {
+      //   userId: 1,
+      //   title: 'un titulo',
+      //   body: 'un body'
+      // };
+      // const res = await this.$axios.$post('https://jsonplaceholder.typicode.com/posts', jsonPost)
+      // console.log('peticion a jsonplaceholder', res)
   
       const json = {
         method: "post",
@@ -32,7 +32,7 @@ export default {
             updated_at: "1606592051"
         }
       }
-      const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', json)
+      const data = await this.$axios.$post('/api/notes', JSON.stringify(json))
       console.log('Peticion a api', data)
     } catch (error) {
       console.log(error)

@@ -38,19 +38,16 @@ export default {
     '@nuxtjs/axios',
     // // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    // '@nuxtjs/proxy',
+    '@nuxtjs/proxy',
   ],
 
   // https://stackoverflow.com/questions/61591915/inject-variable-from-server-for-axios-in-nuxt
-  // proxy: {
-  //   '/api/notes/': {
-  //     target: 'https://applicationnotes.000webhostapp.com/',
-  //     changeOrigin: true
-  //   }
-  // },
+  proxy: [
+    'https://applicationnotes.000webhostapp.com/api/notes'
+  ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    
+    proxy: true
   },
 
 
