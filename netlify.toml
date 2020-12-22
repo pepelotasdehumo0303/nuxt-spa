@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/notes"
-  to = "https://applicationnotes.000webhostapp.com/"
+  to = "https://applicationnotes.000webhostapp.com/api/notes"
   status = 200
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
