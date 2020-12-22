@@ -59,7 +59,7 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     // proxy: true,
-    baseURL: 'https://applicationnotes.000webhostapp.com/api/notes'
+    baseURL: 'https://applicationnotes.000webhostapp.com/'
   },
 
 
