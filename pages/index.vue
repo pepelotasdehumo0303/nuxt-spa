@@ -14,39 +14,29 @@
 // import axios from 'axios'
 export default {
   async fetch() {
-    // const json = {
-    //   method: "post",
-    //   body :  {
-    //       title: "nuxt spa test 0.00",
-    //       content: "qwerty12345",
-    //       created_at: "1606592051",
-    //       updated_at: "1606592051"
-    //   }
-    // }
-
-    // const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', JSON.stringify(json))
-
-    // console.log(data)
-    
-    let jsonPost = {
-      userId: 1,
-      title: 'un titulo',
-      body: 'un body'
-    };
-    const res = await this.$axios.$post('/https://jsonplaceholder.typicode.com/posts', jsonPost)
-    console.log('peticion a jsonplaceholder', res)
-
-    const json = {
-      method: "post",
-      body :  {
-          title: "Una prueba",
-          content: "qwerty12345",
-          created_at: "1606592051",
-          updated_at: "1606592051"
+    try {
+      let jsonPost = {
+        userId: 1,
+        title: 'un titulo',
+        body: 'un body'
+      };
+      const res = await this.$axios.$post('https://jsonplaceholder.typicode.com/posts', jsonPost)
+      console.log('peticion a jsonplaceholder', res)
+  
+      const json = {
+        method: "post",
+        body :  {
+            title: "Una prueba",
+            content: "qwerty12345",
+            created_at: "1606592051",
+            updated_at: "1606592051"
+        }
       }
+      const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', json)
+      console.log('Peticion a api', data)
+    } catch (error) {
+      console.log(error)
     }
-    const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', json)
-    console.log('Peticion a api', data)
   },
 };
 </script>
