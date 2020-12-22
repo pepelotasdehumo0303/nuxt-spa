@@ -28,20 +28,13 @@ export default {
 
     // console.log(data)
     let jsonPost = {
-      method: "post",
-      body: {
-        title: "Title",
-        content: "qwerty12345",
-        created_at: "1606592051",
-        updated_at: "1606592051",
-      },
+      userId: 1,
+      title: 'un titulo',
+      body: 'un body'
     };
-    const res = await this.$axios.post('/api/notes',
-    jsonPost)
+    const res = await this.$axios.$post('/', jsonPost)
 
-    console.log(res.request)
-
-    console.log(res.data)
+    console.log(res)
   },
 };
 </script>
