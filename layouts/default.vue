@@ -54,6 +54,12 @@
 
 <script>
 export default {
+  watch: {
+    // '$route.params': '$fetch'
+  },
+  fetch() {
+    console.log('fetch de layout')
+  },
   data () {
     return {
       items: [

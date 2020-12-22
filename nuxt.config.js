@@ -38,10 +38,19 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/proxy',
   ],
 
+  proxy: {
+    '/api/notes': {
+      target: 'https://applicationnotes.000webhostapp.com/',
+    }
+  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true,
+    prefix: 'https://applicationnotes.000webhostapp.com/api'
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
