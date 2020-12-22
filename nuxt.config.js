@@ -50,7 +50,7 @@ export default {
   // },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://jsonplaceholder.typicode.com/posts'
+    
   },
 
 

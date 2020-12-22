@@ -27,14 +27,26 @@ export default {
     // const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', JSON.stringify(json))
 
     // console.log(data)
+    
     let jsonPost = {
       userId: 1,
       title: 'un titulo',
       body: 'un body'
     };
-    const res = await this.$axios.$post('/', jsonPost)
+    const res = await this.$axios.$post('/https://jsonplaceholder.typicode.com/posts', jsonPost)
+    console.log('peticion a jsonplaceholder', res)
 
-    console.log(res)
+    const json = {
+      method: "post",
+      body :  {
+          title: "Una prueba",
+          content: "qwerty12345",
+          created_at: "1606592051",
+          updated_at: "1606592051"
+      }
+    }
+    const data = await this.$axios.$post('https://applicationnotes.000webhostapp.com/api/notes', json)
+    console.log('Peticion a api', data)
   },
 };
 </script>
