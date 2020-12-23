@@ -36,7 +36,7 @@ export default {
       console.log('Peticion a api', data)
 
 
-      const response = await fethc('/.netlify/functions/hello')
+      const response = await fetch('/.netlify/functions/hello')
       const func = await response.json()
 
       console.log(func)
