@@ -4,3 +4,9 @@
   status = 200
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
+
+
+  
+
+  [build]
+  functions = "my_functions" # netlify-lambda builds to this folder AND Netlify reads functions from here

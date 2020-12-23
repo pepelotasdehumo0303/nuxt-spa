@@ -34,6 +34,13 @@ export default {
       }
       const data = await this.$axios.$post('/api/notes', JSON.stringify(json))
       console.log('Peticion a api', data)
+
+
+      const response = await fethc('/.netlify/functions/hello')
+      const func = await response.json()
+
+      console.log(func)
+
     } catch (error) {
       console.log(error)
     }
